@@ -57,7 +57,7 @@ class GsocScrapper:
         with open("org_skills.csv", "w") as file:
             writer = csv.writer(file)
             for key, value in self.org_skills_to_be_sent.items():
-                writer.writerow([key, self.org_links[key], "{" + str(value) + "}"])
+                writer.writerow([key, self.org_links[key], str(value)])
 
     def send_mails(self, to_email, to_pwd):
         msg = MIMEMultipart()
